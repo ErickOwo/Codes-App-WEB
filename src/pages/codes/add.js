@@ -10,7 +10,7 @@ const AddCodes = () => {
   const handlerSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(formRef.current);
-    const data = { title: formData.get('title'), code: formData.get('code') };
+    const data = { title: formData.get('title'), code: formData.get('code'), media: formData.get('media') };
     postMultimedia(endPoinst.data.api + '/add', data).then((res) => {
       if (!res.error)
         setTimeout(() => {

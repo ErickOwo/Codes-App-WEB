@@ -2,6 +2,7 @@ import { getData } from '@api/requests';
 import { useEffect, useState } from 'react';
 import endPoinst from '@api/index';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Codes = () => {
   const [data, setData] = useState(null);
@@ -30,7 +31,13 @@ const Codes = () => {
       <div className=" flex flex-wrap md:p-3 p-1 gap-4">
         {data?.map((item, index) => (
           <div key={index} className="bg-[#0B2586] px-3 py-5">
-            <div className="bg-black p-2 w-[280px] select-none md:w-[309px] h-[165px] font-light text-md">Fóto no disponible</div>
+            {!item.imgURL ? (
+              <div className="bg-black p-2 w-[280px] select-none md:w-[309px] h-[165px] font-light text-md">Fóto no disponible</div>
+            ) : (
+              <div className="bg-black w-[280px] select-none md:w-[309px] h-[165px] font-light text-md overflow-hidden flex">
+                <Image width="309" height="195" src={item.imgURL}></Image>
+              </div>
+            )}
             <div>{item.title}</div>
             <div>{item.code}</div>
             <div className="flex flex-wrap gap-2 text-stone-800 mt-2 text-lg">
