@@ -35,7 +35,7 @@ const Codes = () => {
               <div className="bg-black p-2 w-[280px] select-none md:w-[309px] h-[165px] font-light text-md">Fóto no disponible</div>
             ) : (
               <div className="bg-black w-[280px] select-none md:w-[309px] h-[165px] font-light text-md overflow-hidden flex">
-                <Image width="309" height="195" src={item.imgURL}></Image>
+                <Image width="909" height="495" src={item.imgURL}></Image>
               </div>
             )}
             <div>{item.title}</div>
