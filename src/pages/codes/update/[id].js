@@ -54,7 +54,7 @@ const Update = () => {
           <input id="media" name="media" type="file" className="hidden"></input>
         </div>
         <button type="submit" className="py-2 px-16 m-auto bg-green-500">
-          Agregar
+          Modificar
         </button>
       </form>
     </div>
