@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const optionsMultiedia = {
+const optionsMultimedia = {
   headers: {
     'Content-Type': 'multipart/form-data',
   },
@@ -18,7 +18,7 @@ const postData = async (url, body) => {
 };
 
 const postMultimedia = async (url, body) => {
-  const response = await axios.post(url, body, optionsMultiedia);
+  const response = await axios.post(url, body, optionsMultimedia);
   return response.data;
 };
 
@@ -27,4 +27,9 @@ const getData = async (url) => {
   return response.data;
 };
 
-export { postData, postMultimedia, getData };
+const patchDataMultimedia = async (url, body) => {
+  const response = await axios.patch(url, body, optionsMultimedia);
+  return response.data;
+};
+
+export { postData, postMultimedia, getData, patchDataMultimedia };
