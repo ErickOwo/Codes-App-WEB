@@ -41,7 +41,9 @@ const Codes = () => {
             <div className="text-[#000] text-2xl font-semibold">{item.title}</div>
             <div>{item.code}</div>
             <div className="flex flex-wrap gap-2 text-stone-800 mt-2 text-lg">
-              <button className="bg-yellow-300 px-2 py-1 hover:bg-yellow-200">Editar</button>
+              <Link href={`/codes/update/${item.code}`}>
+                <button className="bg-yellow-300 px-2 py-1 hover:bg-yellow-200">Editar</button>
+              </Link>
               <button className="bg-red-500 px-2 py-1 hover:bg-red-400">Eliminar</button>
             </div>
           </div>

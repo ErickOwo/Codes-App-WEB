@@ -26,7 +26,8 @@ const Update = () => {
   const handlerSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(formRef.current);
-    const data = { title: formData.get('title'), code: formData.get('code'), media: formData.get('media') };
+    const data = { title: formData.get('title'), code: formData.get('code'), media: formData.get('media'), public_id: dataCalled.public_id, id: dataCalled.id };
+
     patchDataMultimedia(endPoinst.data.api + '/update/' + router.query.id, data).then((res) => {
       if (!res.error)
         setTimeout(() => {

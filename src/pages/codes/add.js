@@ -24,11 +24,11 @@ const AddCodes = () => {
       <form ref={formRef} onSubmit={handlerSubmit} className="flex flex-col items-center w-full max-w-[450px] bg-[#0125f4] p-8 gap-2">
         <div className="flex flex-wrap gap-2 justify-between w-full">
           <label htmlFor="title">Nombre</label>
-          <input id="title" name="title" className="border border-black"></input>
+          <input id="title" name="title" className="border border-black" required></input>
         </div>
         <div className="flex flex-wrap gap-2 justify-between w-full">
           <label htmlFor="code">Código</label>
-          <input id="code" name="code" className="border border-black"></input>
+          <input id="code" name="code" className="border border-black" required></input>
         </div>
         <div className="flex flex-wrap gap-2 justify-between w-full">
           <label htmlFor="media" className="m-auto mt-5 bg-slate-50 py-2 px-7">
