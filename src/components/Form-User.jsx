@@ -66,7 +66,10 @@ const FormUser = ({ signin = false }) => {
       },1300);
     }).catch(e=>{
       if(e?.response?.data?.error) setMessage({text: e?.response?.data?.error, type: 'error'})
-      else setMessage({text: 'Error en la API', type: 'error'});
+      else {
+        setMessage({text: 'Error en la API', type: 'error'});
+        console.log(e)
+      }
     }); 
     else signIn({email: data.email, password: data.password})
   }
